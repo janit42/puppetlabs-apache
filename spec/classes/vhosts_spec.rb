@@ -20,6 +20,11 @@ describe 'apache::vhosts', type: :class do
             }
           }
         }
+        {
+          vhosts_defaults: {
+            'access_log_format' => 'noip',
+          }
+        }
       end
 
       it { is_expected.to contain_apache__vhost('custom_vhost_1') }
